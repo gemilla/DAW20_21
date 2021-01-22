@@ -29,7 +29,7 @@ public class Punto {
     }
     
     public void mostrarInformación(){
-        System.out.println("Soy un punto y mis coordenadas son "+ x+ " y " + y);
+        System.out.println(toString());
     }
     
     public String toString(){

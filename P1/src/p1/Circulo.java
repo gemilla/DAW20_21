@@ -37,7 +37,7 @@ public class Circulo {
         return 2*Math.PI*radio;
     }
      public void mostrarInformación(){
-        System.out.println("Soy un circulo y mi centro es "+ centro.toString()+ " y de radio " + radio);
+        System.out.println(toString());
     }
     
     public String toString(){
