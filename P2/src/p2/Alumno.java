@@ -2,7 +2,7 @@ package p2;
 
 public class Alumno {
 	//tres atributos private de tipo Asignatura.
-	private Asignatura asignatura1;
+	protected Asignatura asignatura1;
 	private Asignatura asignatura2;
 	private Asignatura asignatura3;
 	
@@ -22,7 +22,7 @@ public class Alumno {
 	
 	//getter para cada uno de los atributos.
 	public Asignatura getAsignatura1() {
-		return asignatura1;
+		return asignatura2;
 	}
 	public Asignatura getAsignatura2() {
 		return asignatura2;
@@ -33,6 +33,7 @@ public class Alumno {
         public void mostrarInformacion(){
             System.out.println(toString());
         }
+        @Override
         public String toString(){
             return "Alumno: \n "+asignatura1.toString()+ "\n"+ asignatura2.toString()+"\n"+ asignatura3.toString();
         

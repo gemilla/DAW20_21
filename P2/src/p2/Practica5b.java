@@ -11,6 +11,8 @@ public class Practica5b {
 		Alumno Alex=new Alumno(programacion, sistemas, bbdd);
 		
 		Profesor.ponerNotas(Alex);
+                System.out.println(Alex);
 		System.out.println("La media del alumno es "+Profesor.calcularMedia(Alex));
+                
 	}
 }
