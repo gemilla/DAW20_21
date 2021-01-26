@@ -20,6 +20,12 @@ public class Tester {
         OperacionesArrays.cargaAleatoria(lista);
         OperacionesArrays.listarContenido(lista);
         System.out.println(OperacionesArrays.calcularMedia(lista));
+        OperacionesArrays.ordenar(lista);
+        OperacionesArrays.listarContenido(lista);
+        int copia[] = OperacionesArrays.copiaInvertida(lista);
+        OperacionesArrays.listarContenido(copia);
+        OperacionesArrays.listarContenido(lista);
+        
     }
     
 }

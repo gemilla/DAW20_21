@@ -38,4 +38,29 @@ public class OperacionesArrays {
         }
         return suma/array.length;
     }
+    public static void ordenar(int [] array){
+    boolean intercambio = true;
+        while (intercambio==true) {
+            intercambio = false;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] < array[i + 1]) {
+                    int auxiliar = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = auxiliar;
+                    intercambio = true;
+                }
+            }
+    
+    }
+}
+    public static int [] copiaInvertida (int [] array){
+        int [] copia = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            copia[i] = array[array.length-i-1];
+        }
+        /*for (int i = array.length-1, j=0 ; j <copia.length; i--,j++) {
+            copia[j] = array[i];
+        }*/
+        return copia;
+    }
 }
