@@ -18,8 +18,8 @@ public class Punto {
     }
     //constructor por defecto
     public Punto(){
-       x = 5;
-       y = 10;
+       x = 1;
+       y = 1;
     }
     public double getX(){
         return x;
@@ -27,18 +27,22 @@ public class Punto {
     public double getY(){
         return y;
     }
+    public void setX(double nuevoX){
+        x=nuevoX;
+    }
     
     public void mostrarInformación(){
         System.out.println(toString());
     }
     
+  
     public String toString(){
-        String cadena = "Soy un punto y mis coordenadas son "+ x+ " y " + y;
-        return cadena;
+        return "Punto y mis coordenadas son "+ x+ " y " + y;
+        
     }
     
     public double calcularDistanciaDesde(Punto otroPunto){
-    double distancia = Math.sqrt(Math.pow(this.x-otroPunto.x, 2)+Math.pow(this.y-otroPunto.y, 2));
+        double distancia = Math.sqrt(Math.pow(x-otroPunto.x, 2)+Math.pow(y-otroPunto.y, 2));
         return distancia;
     }
 }
