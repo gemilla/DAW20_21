@@ -2,22 +2,30 @@ package p1;
 
 public class Practica5a {//Tester
 	public static void main(String[] args) {
-		Punto p1 = new Punto ();
+		/*Punto p1 = new Punto ();
                 Punto p2 = new Punto(12,4);
                 Punto pClarisse = new Punto (5,5);
                 Punto pAlvaro = new Punto (6,12);
                 System.out.println(pClarisse.calcularDistanciaDesde(pAlvaro));
                 System.out.println(pAlvaro.calcularDistanciaDesde(pAlvaro));
-                /*System.out.println("Soy un punto, con coordenadas: ");
+                System.out.println("Soy un punto, con coordenadas: ");
 		System.out.println(p1.getX());
-                System.out.println(p1.getY());*/
+                System.out.println(p1.getY());
                 Circulo cClarisse = new Circulo(pClarisse,8);
                 
                 System.out.println(p2);
                 p2.mostrarInformación();
                 System.out.println(cClarisse.toString());
-                /*
+                */
+                boolean respuesta = Validaciones.validarCuadrado(new Punto(0,2), new Punto(2,0), new Punto(0,0), new Punto(2,2));
+                System.out.println(respuesta);
                 
+                Cuadrado cuadrado1 = new Cuadrado();
+                System.out.println(cuadrado1.toString());
+                
+                cuadrado1.setV1(new Punto (5,3));
+                System.out.println(cuadrado1);
+                /*
                 
                 
                 

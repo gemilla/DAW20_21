@@ -4,6 +4,8 @@ public class Triangulo {
 	private Punto p1;
 	private Punto p2;
 	private Punto p3;
+        
+        
 	
 	public Triangulo(Punto p1, Punto p2, Punto p3) {
 		this.p1=p1;
