@@ -12,13 +12,23 @@ package p1;
 public class Circulo {
     private Punto centro;
     private double radio;
+    
     public Circulo (Punto centro, double radio){
         this.centro = centro;
         this.radio = radio;
     }
+    
+    public Circulo (double x,double y, double radio){
+        //this(new Punto(x,y),radio);
+        this.centro = new Punto(x,y);
+        this.radio = radio;
+        
+    }
+    
     public Circulo (){
-        centro = new Punto(12,12);
-        radio = 12;
+        //this(12,12,12);
+        this.centro = new Punto(12,12);
+        this.radio = 12;
     }
     public Punto getCentro(){
         return centro;
