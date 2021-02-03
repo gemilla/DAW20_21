@@ -36,7 +36,6 @@ public class Triangulo {
 		double distancia= p1.calcularDistanciaDesde(otroPunto);
 		return distancia;
 }
-
 	public double calcularPerimetro() {
 		double perimetro=p1.calcularDistanciaDesde(p2)+p2.calcularDistanciaDesde(p3)+p3.calcularDistanciaDesde(p1);
 		return perimetro;

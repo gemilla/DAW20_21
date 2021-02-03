@@ -20,7 +20,9 @@ public class TesterCirculos {
         Punto centroEva = new Punto();
         Circulo cEva = new Circulo(centroEva,3);
         Circulo cClarisse = new Circulo (8,3,5);
-        
+        System.out.println(cAinhoa);
+        System.out.println(cEva);
+        cClarisse.mostrarInformación();
     }
     
 }

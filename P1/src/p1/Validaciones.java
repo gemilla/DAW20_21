@@ -39,6 +39,11 @@ public class Validaciones {
             respuesta = true;
         return respuesta;
     }
-    
+    public static  boolean validarCuadrado4(Punto v1, Punto v2, Punto v3, Punto v4){
+       if (v1.calcularDistanciaDesde(v2)==v2.calcularDistanciaDesde(v3) && v3.calcularDistanciaDesde(v4)==v4.calcularDistanciaDesde(v1) && v4.calcularDistanciaDesde(v1)==v3.calcularDistanciaDesde(v2))
+           return true;
+       else 
+           return false;
+      }
     
 }

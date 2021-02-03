@@ -5,6 +5,7 @@ public class Cuadrado {
     private Punto V2;
     private Punto V3;
     private Punto V4;
+    
     public Cuadrado(Punto V1, Punto V2, Punto V3, Punto V4){
         this.V1=V1;
         this.V2=V2;

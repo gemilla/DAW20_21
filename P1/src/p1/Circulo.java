@@ -22,7 +22,6 @@ public class Circulo {
         //this(new Punto(x,y),radio);
         this.centro = new Punto(x,y);
         this.radio = radio;
-        
     }
     
     public Circulo (){
@@ -50,6 +49,7 @@ public class Circulo {
         System.out.println(toString());
     }
     
+    @Override
     public String toString(){
         String cadena = "Soy un circulo y mi centro es "+ centro.toString()+ " y de radio " + radio;
         return cadena;

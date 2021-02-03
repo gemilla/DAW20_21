@@ -38,33 +38,37 @@ public class Tester {
     }
     public static void main(String[] args) {
         // TODO code application logic here
-        int [] numeros = new int[5];
-        for (int i = 0; i < numeros.length; i++) {
-            System.out.print(numeros[i]+ " - ");
+       
+        Punto pentagono [] = new Punto[5];
+        //creación de los objetos
+        for (int i = 0; i < pentagono.length; i++) {
+            double x = (int)(Math.random()*100);
+            double y = (int)(Math.random()*100);
+            pentagono[i]= new Punto(x,y);            
         }
-        System.out.println("\n--------------");
-        Punto [] listaPuntos = new Punto[5];
+        for (int i = 0; i < pentagono.length; i++) {
+            System.out.println(pentagono[i]);           
+        }
+                
+        //mala práctica, para esto hacer el siguiente for
+        for (int i = 0; i < pentagono.length; i++) {
+            pentagono[i] = new Punto();
+            pentagono[i].setX(i);
+            pentagono[i].setY(i);
+         }
         
-        /*
-        //mala práctica, para esto hacer las líneas 35 a 37
-        for (int i = 0; i < listaPuntos.length; i++) {
-            listaPuntos[i] = new Punto();
-            listaPuntos[i].setX(i);
-            listaPuntos[i].setY(i);
-            
-        }*/
         
-        /*
-        for (int i = 0; i < listaPuntos.length; i++) {
-            listaPuntos[i] = new Punto(i,i);
-        }*/
+        for (int i = 0; i < pentagono.length; i++) {
+            pentagono[i] = new Punto(i,i);
+        }
   
-        for (int i = 0; i < listaPuntos.length; i++) {
-            listaPuntos[i] = damePunto();
+        for (int i = 0; i < pentagono.length; i++) {
+            pentagono[i] = damePunto();
         }
         
-        for (int i = 0; i < listaPuntos.length; i++) {
-            System.out.println(listaPuntos[i].toString()+ " - ");
-        }    }
+        for (int i = 0; i < pentagono.length; i++) {
+            System.out.println(pentagono[i].toString()+ " - ");
+        }
+}
     
 }
