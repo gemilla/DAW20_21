@@ -11,14 +11,21 @@ public class Circulo extends Figura{
 	}
 	
 	
+        @Override
 	public double calcularPerimetro() {
 		double perimetro=2*dimension*Math.PI;
 		return perimetro;
 	}
+        @Override
 	public double calcularArea() {
 		double area=Math.PI * dimension * dimension;
 		return area;
 	}
+
+    @Override
+    public String dameNombre() {
+          return "radio";
+    }
 	
 	
 }

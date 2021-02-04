@@ -33,13 +33,17 @@ public abstract class Figura {
     public void mostrarInfo() {
 		System.out.println(toString());
     }
-  //  public abstract int calcularPerimetro();
-   // public abstract double calcularArea();
-	
+    public abstract double calcularPerimetro();
+    public abstract double calcularArea();
+    
+    
+    public String dameNombre(){
+        return "lado";
+    }
     
     @Override
     public String toString() {
-        return this.getClass().getSimpleName()+"{" + "dimension=" + dimension + '}';
+        return this.getClass().getSimpleName()+"{" + dameNombre() + " "+ dimension + '}';
     }
     
 }

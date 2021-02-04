@@ -37,13 +37,13 @@ public class tester {
             } else if (i < 6) {
                 figuras[i] = new Circulo((int)(Math.random()*10));
             } else {
-                figuras[i] = dameCuadrado();
+                figuras[i] = new Rombo(i);
             }
 
         }
         for (int i = 0; i < figuras.length; i++) {
             System.out.println(figuras[i]);
-            System.out.println(figuras[i]);
+            System.out.println(figuras[i].calcularArea());
             
         }
 
