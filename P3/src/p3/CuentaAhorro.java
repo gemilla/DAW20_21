@@ -13,15 +13,17 @@ public class CuentaAhorro extends CuentaCorriente {
 	/*constructor con par�metros de tipo Titular, String y double. El
 	saldo se inicializar� a 15,3.*/
 	public CuentaAhorro(Titular t, String n, double i) {
-	 super(t, n, i);
-         setSaldo(15.3);
+	 super(t, n); //super(t,n,15.3);
+         interes=i;
 	}
 	/*constructor con par�metros de tipo Titular y String. El saldo se
 	inicializar� a 15,3 y el inter�s a 2,5.*/
 	public CuentaAhorro(Titular t, String n) {
-		super(t, n);
-		setSaldo(15.3);
-		interes=2.5;
+		/*super(t, n, 15.3);
+		interes=2.5;*/
+                this(t,n,2.5);
+                //this(t,n,15.3,2.5);
+                
 	}
 	//getter para cada uno de los atributos.
 	public double getInteres() {
