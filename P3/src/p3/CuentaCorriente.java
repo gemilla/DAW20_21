@@ -68,7 +68,7 @@ public class CuentaCorriente {
 
     @Override
     public String toString() {
-        return "CuentaCorriente{" + "titular1=" + titular1 + ", numeroCuenta=" + numeroCuenta + ", saldo=" + saldo + '}';
+        return this.getClass().getSimpleName()+"{" + "titular1=" + titular1 + ", numeroCuenta=" + numeroCuenta + ", saldo=" + saldo + '}';
     }
 
     /*m�todo para comparar cuentas, sabiendo que dos cuentas

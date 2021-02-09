@@ -15,6 +15,20 @@ public class Practica6 {
 		
 		CuentaAhorro ahorro=new CuentaAhorro(Alex, "136485216");
 		System.out.println(ahorro.calcularInteres());
+                System.out.println("-----------ARRAY CUENTAS-------------");
+                CuentaCorriente cuentas [] = new CuentaCorriente[3];
+                cuentas[0] = cuenta1;
+                cuentas[1] = cuenta2;
+                cuentas[2] = ahorro;
+                for (int i = 0; i < cuentas.length; i++) {
+                    System.out.println(cuentas[i]);
+                    if (cuentas[i].getClass().getSimpleName().equalsIgnoreCase("CuentaAhorro"))
+                        System.out.println(((CuentaAhorro)cuentas[i]).getInteres());
+                    
+                    
+                   
+                
+            }
 		
 	}
 	
