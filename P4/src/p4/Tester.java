@@ -9,9 +9,9 @@ public class Tester {
 
         
         for (int i = 0; i < llamadas.length; i++) {
-            System.out.println("Introduzca el tipo de llamada");
+            System.out.println("Introduzca el tipo de llamada (local/provincial)");
             String llamada = lector.next();
-            llamada = llamada.toLowerCase();
+            //llamada = llamada.toLowerCase();
             System.out.println(llamada);
             System.out.println("Introduzca el numero de origen");
             int origen = lector.nextInt();
@@ -40,8 +40,12 @@ public class Tester {
         }
     
     }
+    
+    
+    
+    
     public static void main(String[] args) {
-        Llamada llamadas[] = new Llamada[10];
+        Llamada llamadas[] = new Llamada[50];
         //cargarLlamadas(llamadas);
         cargarLlamadasAleatoria(llamadas);
         
