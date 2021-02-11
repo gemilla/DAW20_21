@@ -22,8 +22,8 @@ public class CuentaAhorro extends CuentaCorriente {
     /*constructor con par�metros de tipo Titular y String. El saldo se
 	inicializar� a 15,3 y el inter�s a 2,5.*/
     public CuentaAhorro(Titular t, String n) {
-        /*super(t, n, 15.3);
-		interes=2.5;*/
+        /*super(t, n);
+	interes=2.5;*/
         this(t, n, 2.5);
         //this(t,n,15.3,2.5);
 
@@ -44,7 +44,7 @@ public class CuentaAhorro extends CuentaCorriente {
 
     @Override
     public String toString() {
-        return super.toString()+" interes=" + interes + '}';
+        return super.toString() + "interes=" + interes + '}';
     }
 
 }

@@ -5,7 +5,13 @@ public class Titular {
 	private String Nombre;
 	private String Apellidos;
 	private int Edad;
-
+    
+    /**
+     * Constructor que permite crear un titular a partir del nombre, los apellidos y la edad
+     * @param Nombre
+     * @param Apellidos
+     * @param Edad 
+     */    
     public Titular(String Nombre, String Apellidos, int Edad) {
         this.Nombre = Nombre;
         this.Apellidos = Apellidos;
@@ -18,11 +24,17 @@ public class Titular {
         this.Edad = 18;
     }
 
-   
+   /**
+    * Método que permite leer el valor de la edad del titular
+    * @return la edad del titular
+    */
     public int getEdad() {
         return Edad;
     }
-
+    /**
+     * 
+     * @param Edad la edad nueva
+     */
     public void setEdad(int Edad) {
         this.Edad = Edad;
     }

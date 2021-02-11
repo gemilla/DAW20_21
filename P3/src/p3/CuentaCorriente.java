@@ -5,7 +5,7 @@ public class CuentaCorriente {
     /*tres atributos private de tipo Titular (Nombre � String, Apellidos �
 	String y Edad � int), de tipo String (el n�mero de cuenta) y de tipo double
 	(el saldo).*/
-    private Titular titular1;
+    protected Titular titular1;
     private String numeroCuenta;
     private double saldo;
     //constructor con par�metros de tipo Titular, String y double.
@@ -70,6 +70,7 @@ public class CuentaCorriente {
     public String toString() {
         return this.getClass().getSimpleName()+"{" + "titular1=" + titular1 + ", numeroCuenta=" + numeroCuenta + ", saldo=" + saldo + '}';
     }
+    
 
     /*m�todo para comparar cuentas, sabiendo que dos cuentas
 	ser�n iguales si sus n�meros de cuenta son iguales.*/
@@ -78,9 +79,10 @@ public class CuentaCorriente {
      * @param c2
      * @return
      */
-    public String compararCuentas(CuentaCorriente c2) {
+    public String compararCuentas(CuentaCorriente otraCuenta) {
         String c;
-        if (numeroCuenta.compareTo(c2.numeroCuenta) == 0) {
+        if (numeroCuenta.compareTo(otraCuenta.numeroCuenta) == 0) {
+        //if (numeroCuenta.equals(otraCuenta.numeroCuenta)==true){
             c = "Las cuentas son iguales";
         } else {
             c = "Las cuentas son diferentes";
