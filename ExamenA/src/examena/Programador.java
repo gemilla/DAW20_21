@@ -1,4 +1,4 @@
-package examenA;
+package examena;
 
 public class Programador extends Trabajador{
 	private String lenguaje;
@@ -35,7 +35,9 @@ public class Programador extends Trabajador{
 	}
 	@Override
 	public String toString() {
-		return "Programador [lenguaje=" + lenguaje + ", experiencia=" + experiencia + "]";
+		return super.toString()+"[lenguaje=" + lenguaje + ", experiencia=" + experiencia + "]";
 	}
+
+    
 	
 }

@@ -1,4 +1,4 @@
-package examenA;
+package examena;
 
 public class Tester {
 
@@ -12,9 +12,14 @@ public class Tester {
         System.out.println(dia);
          */
         
-        Jefe uno = new Jefe();
+        /*Jefe uno = new Jefe();
         System.out.println(uno);
-        System.out.println(uno.calcularSalario());
+        System.out.println(uno.calcularSalario());*/
+        Empresa AinhoaEva = new Empresa(10);
+        System.out.println(AinhoaEva);
+        AinhoaEva.listarTrabajadores();
+        
+        
     }
 
 }

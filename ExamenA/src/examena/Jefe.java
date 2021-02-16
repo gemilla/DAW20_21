@@ -1,4 +1,4 @@
-package examenA;
+package examena;
 
 public class Jefe extends Trabajador {
 

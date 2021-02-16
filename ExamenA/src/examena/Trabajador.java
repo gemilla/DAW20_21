@@ -1,6 +1,6 @@
-package examenA;
+package examena;
 
-public abstract class Trabajador {
+public abstract class Trabajador implements Comparable<Trabajador>{
 	private String nombre;
 	private String nif;
 	private String departamento;
@@ -57,5 +57,10 @@ public abstract class Trabajador {
 		return this.getClass().getSimpleName()+ "[nombre=" + nombre + ", nif=" + nif + ", departamento=" + departamento + ", sueldoBase="
 				+ sueldoBase + ", fecha=" + fecha + "]";
 	}
+        @Override
+        public int compareTo(Trabajador o) {
+            //return this.nombre.compareTo(o.nombre);
+            return (int)(this.sueldoBase-o.sueldoBase);
+    }
 	
 }
