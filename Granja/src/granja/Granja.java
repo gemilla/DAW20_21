@@ -51,7 +51,7 @@ public class Granja {
 
     public Animal agregarAnimal() {
         Scanner lector = new Scanner(System.in);
-        Animal nuevo= null;
+        Animal nuevo = null;
         int numero = 0;
         do {
             System.out.println("Pulsa un n�mero para seleccionar: ");
@@ -75,7 +75,7 @@ public class Granja {
                     System.out.println("Introduce el peso en Kg de la vaca");
                     int peso = lector.nextInt();
                     nuevo = new Vaca(nombre, fecha, litros, peso);
-                    
+
                     break;
                 case 2:
 
@@ -86,7 +86,7 @@ public class Granja {
                         huevos[i] = numeroHuevos;
                     }
                     nuevo = new Gallina(nombre, fecha, huevos);
-                    
+
                     break;
                 default:
                     System.out.println("Por favor, introduce un n�mero v�lido.");
@@ -98,16 +98,16 @@ public class Granja {
 
     public void sumarAnimal(Animal a) {
         boolean introducido = false;
-        for (int i = 0; i < animales.length && introducido==false ; i++) {
-        //for (int i = 0; i < animales.length && !introducido ; i++) {
+        for (int i = 0; i < animales.length && introducido == false; i++) {
+            //for (int i = 0; i < animales.length && !introducido ; i++) {
             if (animales[i] == null) {
                 animales[i] = a;
                 System.out.println("Animal añadido con éxito.");
                 //i = animales.length;
-                introducido = true; 
+                introducido = true;
             }
         }
-        
+
     }
 
     public void consultarAnimales(int anyo) {
@@ -141,4 +141,40 @@ public class Granja {
         }
     }
 
+    public int cuantosAnimales() {
+        int numero = 0;
+        for (int i = 0; i < animales.length; i++) {
+            if (animales[i] != null) {
+                numero++;
+            }
+        }
+        return numero;
+
+    }
+
+    public void ordenar() {
+        Animal[] arrayAuxiliar = new Animal [cuantosAnimales()];
+        for (int i = 0, j=0; i < animales.length; i++) {
+            // Pista para ordenar gallinas if( animales[i]!= null && animales[i] instanceof Gallina){
+            if (animales[i]!=null){
+                arrayAuxiliar[j]= animales[i];
+                j++;
+            }
+        }
+        Arrays.sort(arrayAuxiliar);
+        for (int i = 0; i < arrayAuxiliar.length; i++) {
+            System.out.println(arrayAuxiliar[i] + " ");
+        }
+    }
+
+    public void listarInverso() {
+        for (int i = animales.length - 1; i >= 0; i--) {
+            if (animales[i] != null) {
+                System.out.println(animales[i] + " ");
+            } else {
+                System.out.println("Hay sitio para un futuro animalito");
+            }
+        }
+
+    }
 }

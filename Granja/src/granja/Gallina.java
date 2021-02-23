@@ -4,7 +4,7 @@ package granja;
 import java.util.Arrays;
 
 public class Gallina extends Animal {
-
+//Método ordene las gallinas de mayor a menor número medio de huevos al día durante un mes
     private int[] numeroHuevos;
 
     public Gallina(String nombre, Fecha fechaNacimiento, int[] numeroHuevos) {
@@ -65,4 +65,8 @@ public class Gallina extends Animal {
         return respuesta;
 
     }
+
+    
+
+   
 }

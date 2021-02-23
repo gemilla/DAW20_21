@@ -53,9 +53,11 @@ public class Tester {
                     String ident = lector.nextLine();
                     System.out.println(ident);
                     granja.actualizarNombre(ident);
-                
+                case 5: //ordenar
+                    granja.ordenar();
+                    //granja.listarAnimales();
                     
             }
-        } while (numero!=5);
+        } while (numero!=6);
     }
 }

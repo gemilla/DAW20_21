@@ -2,8 +2,8 @@ package granja;
 
 
 
-public abstract class Animal {
-
+public abstract class Animal implements Comparable<Animal> {
+    private int identNumero;
     private String identificador;
     private String nombre;
     private Fecha fechaNacimiento;
@@ -59,4 +59,12 @@ public abstract class Animal {
     }
 
     public abstract boolean rentable();
+     @Override
+    public int compareTo(Animal o) {
+             
+        //return this.identNumero-o.identNumero;
+        return this.identificador.compareTo(o.identificador);
+        //return this.nombre.compareTo(o.nombre);
+         
+    }
 }
