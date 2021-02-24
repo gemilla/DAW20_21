@@ -46,7 +46,7 @@ public class Juego {
         //A..H 0..7
         if ((jugadaChar[0]<'A' || jugadaChar[0]>'H')||(jugadaChar[2]<'A' || jugadaChar[2]>'H')||(jugadaChar[1]< '1' || jugadaChar[1]>'8')||(jugadaChar[3]< '1' || jugadaChar[3]>'8'))
             System.out.println("Error. Las columnas A..F y filas 1..8");
-        if ((jugadaChar[0]< 65 || jugadaChar[0]>72)||(jugadaChar[2]<65 || jugadaChar[2]>72)||(jugadaChar[1]< 49 || jugadaChar[1]>56)||(jugadaChar[3]< 49 || jugadaChar[3]>56))
+        //if ((jugadaChar[0]< 65 || jugadaChar[0]>72)||(jugadaChar[2]<65 || jugadaChar[2]>72)||(jugadaChar[1]< 49 || jugadaChar[1]>56)||(jugadaChar[3]< 49 || jugadaChar[3]>56))
         return mov;
     
     
