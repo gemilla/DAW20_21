@@ -12,7 +12,7 @@ package ajedrezgrupoa;
 public class Juego {
 
     protected int turno;//0->blancas 1->negras
-    
+
     public Juego(int turno) {
         this.turno = turno;
     }
@@ -28,32 +28,47 @@ public class Juego {
     public void setTurno(int turno) {
         this.turno = turno;
     }
-    public void mostrarTurno(){
-    if (turno==0)
+
+    public void mostrarTurno() {
+        if (turno == 0) {
             System.out.println("Turno de Blancas");
-    else
+        } else {
             System.out.println("Turno de Negras");
-    
+        }
+
     }
-    
-    public Movimiento dameMovimiento(String jugada){
+
+    public Movimiento dameMovimiento(String jugada) {
         Movimiento mov = null;
-        if (jugada.length()!=4)
-            System.out.println("Error. La jugada debe tener solo 4 letras: columna inicial (A..F), fila inicial (1..8),columna final (A..F), fila final (1..8)");
-        //charAt(0)
         jugada = jugada.toUpperCase();
-        char [] jugadaChar = jugada.toCharArray();
-        //A..H 0..7
-        if ((jugadaChar[0]<'A' || jugadaChar[0]>'H')||(jugadaChar[2]<'A' || jugadaChar[2]>'H')||(jugadaChar[1]< '1' || jugadaChar[1]>'8')||(jugadaChar[3]< '1' || jugadaChar[3]>'8'))
+        char[] jugadaChar = jugada.toCharArray();
+        if (jugada.equalsIgnoreCase("FIN")) {
+            System.out.println("Vuelve pronto");
+        } else if (jugada.length() != 4) {
+            System.out.println("Error. La jugada debe tener solo 4 letras: columna inicial (A..F), fila inicial (1..8),columna final (A..F), fila final (1..8)");
+        } else if ((jugadaChar[0] < 'A' || jugadaChar[0] > 'H') || (jugadaChar[2] < 'A' || jugadaChar[2] > 'H') || (jugadaChar[1] < '1' || jugadaChar[1] > '8') || (jugadaChar[3] < '1' || jugadaChar[3] > '8')) {
             System.out.println("Error. Las columnas A..F y filas 1..8");
+        } //A..H 0..7
         //if ((jugadaChar[0]< 65 || jugadaChar[0]>72)||(jugadaChar[2]<65 || jugadaChar[2]>72)||(jugadaChar[1]< 49 || jugadaChar[1]>56)||(jugadaChar[3]< 49 || jugadaChar[3]>56))
-        return mov;
-    
-    
+        //hay que chequear errores relativos al turno y al color de las piezas
+        else {
+            //todo ok, traducir 0..7
+            int columnaInicial = jugadaChar[0]-65;
+            int columnaFinal = jugadaChar[2]-65;
+            int filaInicial = jugadaChar[1]-49;
+            int filaFinal = jugadaChar[3]-49;
+            Posicion posInicial = new Posicion(filaInicial, columnaInicial);
+            Posicion posFinal = new Posicion(filaFinal, columnaFinal);
+            mov = new Movimiento(posInicial,posFinal);
+        }
+        return mov ;
     }
     
-    @Override
-    public String toString() {
+
+
+
+@Override
+        public String toString() {
         return "Juego{" + "turno=" + turno + '}';
     }
 

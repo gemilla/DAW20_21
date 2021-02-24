@@ -23,12 +23,14 @@ public class AjedrezGrupoA {
         juego.mostrarTurno();
         String jugada = new String();
         Scanner lector = new Scanner(System.in);
+        Tablero tabla = new Tablero();
         do {
+            tabla.pintarTablero();
             System.out.println("Introduce jugada");
             jugada = lector.nextLine();
-            System.out.println(jugada);
             mov = juego.dameMovimiento(jugada);
-            
+            System.out.println(mov);
+            //llamar a la pieza de la posicion inicial y preguntarle si puede realizar movimiento
         } while (!jugada.equalsIgnoreCase("fin"));
     }
 
