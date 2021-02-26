@@ -42,7 +42,7 @@ public abstract class Pieza {
     }
     
     public abstract boolean esValidoMovimiento(Movimiento mov);
-    
+    public abstract void informarMovimiento();
     @Override
     public String toString() {
         return this.getClass().getSimpleName() + "color=" + color + ", nombre=" + nombre + '}';

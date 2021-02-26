@@ -33,14 +33,21 @@ public class Movimiento {
     public void setPosFin(Posicion posFin) {
         this.posFin = posFin;
     }
+    
     public boolean esVertical(){
         boolean respuesta = false;
         if (posIni.columna==posFin.columna)
             respuesta = true;
         return respuesta;
-    
     }
-    //esHorizontal, esDiagonal (cantidad de salto en horizontal es igual a la vertical),
+    
+    public boolean esHorizontal(){
+        boolean respuesta = false;
+        if (posIni.fila==posFin.fila)
+            respuesta = true;
+        return respuesta;
+    }
+   
     public boolean esDiagonal(){
         boolean respuesta= false;
         if (Math.abs(saltoVertical())==Math.abs(saltoHorizontal()))
@@ -50,10 +57,10 @@ public class Movimiento {
     public int saltoVertical(){
         return posFin.fila-posIni.fila;
     }
-    
     public int saltoHorizontal(){
-    return 0;
+        return posFin.columna-posIni.columna;
     }
+    
     @Override
     public String toString() {
         return "Movimiento{" + "posIni=" + posIni + ", posFin=" + posFin + '}';
