@@ -20,7 +20,6 @@ public class AjedrezGrupoA {
         // TODO code application logic here
         Juego juego = new Juego();
         Movimiento mov = null;
-
         String jugada = new String();
         Scanner lector = new Scanner(System.in);
         Tablero tabla = new Tablero();

@@ -37,7 +37,12 @@ public class Juego {
         }
 
     }
-
+    /**Método que permite chequear la jugada introducida por el usuario.
+     * Si se detectan fallos se comunican al usuario
+     * @param jugada introducida por el usuario
+     * @param tabla tablero
+     * @return un movimiento si es válida la jugada (si no, devuelve null)
+     */
     public Movimiento dameMovimiento(String jugada, Tablero tabla) {
         Movimiento mov = null;
         jugada = jugada.toUpperCase();
