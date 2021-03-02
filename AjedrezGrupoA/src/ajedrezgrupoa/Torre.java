@@ -18,7 +18,7 @@ public class Torre extends Pieza {
         super(color);
     }
     @Override
-    public boolean esValidoMovimiento(Movimiento mov) {
+    public boolean esValidoMovimiento(Movimiento mov, Tablero tabla) {
         boolean respuesta = false;
         if (mov.esVertical() || mov.esHorizontal())
             respuesta=true;

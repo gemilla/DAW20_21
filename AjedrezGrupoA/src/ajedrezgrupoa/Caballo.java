@@ -18,7 +18,7 @@ public class Caballo extends Pieza {
         super(color);
     }
     @Override
-    public boolean esValidoMovimiento(Movimiento mov) {
+    public boolean esValidoMovimiento(Movimiento mov, Tablero tabla) {
         boolean respuesta = false;
         if ((Math.abs(mov.saltoHorizontal())==2 && Math.abs(mov.saltoVertical())==1)||(Math.abs(mov.saltoHorizontal())==1 && Math.abs(mov.saltoVertical())==2))
             respuesta=true;
