@@ -31,7 +31,7 @@ public class AjedrezGrupoA {
             mov = juego.dameMovimiento(jugada, tabla);
             //System.out.println(mov);
             if (mov != null) {
-                if (tabla.tablero[mov.posIni.fila][mov.posIni.columna].esValidoMovimiento(mov)) {
+                if (tabla..esValidoMovimiento(mov)) {
                     tabla.mover(mov);
                     juego.cambiaTurno();
                 } else {

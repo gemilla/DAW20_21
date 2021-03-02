@@ -62,7 +62,7 @@ public class Juego {
                 System.out.println("Error. No hay pieza en la posición inicial");
             } else if (turno != tabla.devuelvePieza(filaInicial, columnaInicial).color) {
                 System.out.println("Error. No hagas trampas, esa pieza no es tuya");
-            } else if (tabla.devuelvePieza(filaInicial, columnaInicial).color == tabla.devuelvePieza(filaFinal, columnaFinal).color) {
+            } else if (tabla.hayPieza(filaFinal, columnaFinal)&&tabla.devuelvePieza(filaInicial, columnaInicial).color == tabla.devuelvePieza(filaFinal, columnaFinal).color) {
                 System.out.println("No te comas tus piezas");
             }else { //todo está ok en cuanto a la jugada
                 Posicion posInicial = new Posicion(filaInicial, columnaInicial);
