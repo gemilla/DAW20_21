@@ -48,7 +48,16 @@ public class Granja {
             }
         }
     }
-
+    public boolean hayDuplicado (String id){
+        boolean duplicado= false;
+        for (int i = 0; i < animales.length; i++) {
+            if (animales[i].getIdentificador().equalsIgnoreCase(id))
+                duplicado = true;
+        }
+        return duplicado;
+    
+    }
+    
     public Animal agregarAnimal() {
         Scanner lector = new Scanner(System.in);
         Animal nuevo = null;
