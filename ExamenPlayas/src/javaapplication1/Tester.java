@@ -44,10 +44,7 @@ public class Tester {
                        playas.listarComunidad(com);
                    break;
                    case 6:
-                       System.out.println("Introduce nombre de la playa");
-                        lector.nextLine();
-                        String lon= lector.nextLine();
-                       playas.cambiarLongitud(lon);
+                        playas.cambiarLongitud();
                    break;
                    case 7:
                        System.out.println("Introduce nombre de la playa");

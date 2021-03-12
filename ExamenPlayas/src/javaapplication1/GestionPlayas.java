@@ -14,13 +14,13 @@ public class GestionPlayas {
                 playas[i] = new PlayaGrande();
             } else //playas[i]=new Cala();
             {
-                playas[i] = new Cala((int) (Math.random() * 100), "playita", new Direccion("orilla", "15345", "Murcia"), (Math.random() * 20), Playa.generadorValoraciones(), true);
+                playas[i] = new Cala((int) (Math.random() * 100), "playita"+i, new Direccion("orilla", "15345", "Murcia"), (Math.random() * 20), Playa.generadorValoraciones(), true);
             }
         }
     }
 
     public GestionPlayas() {
-        this(1000);
+        this(100);
     }
 
     public GestionPlayas(Playa[] playas) {
@@ -111,9 +111,11 @@ public class GestionPlayas {
         }
     }
 
-    public void cambiarLongitud(String nombre) {
+    public void cambiarLongitud() {
         boolean var = false;
         Scanner lector = new Scanner(System.in);
+        System.out.println("Introduce nombre");
+        String nombre = lector.nextLine();
         for (int i = 0; i < playas.length && !var; i++) {
             if (playas[i] != null && playas[i].getNombre().equalsIgnoreCase(nombre)) {
                 var = true;
@@ -156,7 +158,10 @@ public class GestionPlayas {
 
         }
     }
-
+    /**
+     * 
+     * @return el número de playas que hay
+     */
     public int numPlayas() {
         int contador = 0;
         for (int i = 0; i < playas.length; i++) {
@@ -186,7 +191,10 @@ public class GestionPlayas {
         Playa sinHuecos[] =arraySinHuecos();
         Arrays.sort(sinHuecos);
         System.out.println(Arrays.toString(sinHuecos));
-        
+        for (int i = 0; i < sinHuecos.length; i++) {
+             System.out.println(sinHuecos[i].toString()+sinHuecos[i].getPuntuacion());
+            
+        }
     }
     public void listarPlayas(){
     for (int i = 0; i < playas.length; i++) 

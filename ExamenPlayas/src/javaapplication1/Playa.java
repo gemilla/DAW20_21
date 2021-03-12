@@ -92,7 +92,7 @@ public abstract class Playa implements Comparable<Playa> {
     @Override
     public int compareTo(Playa o) {
         //return (int)this.getPuntuacion()-(int)o.getPuntuacion();
-        return this.nombre.compareTo(o.nombre);
+        return nombre.compareToIgnoreCase(o.nombre);
         
     }
     
