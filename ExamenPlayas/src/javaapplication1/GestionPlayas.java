@@ -29,7 +29,7 @@ public class GestionPlayas {
 
     public void darBaja(int id) {
         boolean var = false;
-        for (int i = 0; i < playas.length && !var; i++) {
+        for (int i = 0; i < playas.length && var==false; i++) {
             if (playas[i] != null && playas[i].getId() == id) {
                 playas[i] = null;
                 var = true;
@@ -88,11 +88,17 @@ public class GestionPlayas {
 
     public void sumaPlaya(Playa nuevaPlaya) {
         nuevaPlaya = altaPlaya();
-        for (int i = 0; i < playas.length; i++) {
+        boolean alta = false;
+        for (int i = 0; i < playas.length && !alta; i++) {
             if (playas[i] != null) {
                 playas[i] = nuevaPlaya;
-            }
+                alta = true;
+             }
         }
+        if(alta)
+            System.out.println("Playa dada de alta correctamente");
+        else
+            System.out.println("No se admiten más playas");
     }
 
     public void listarLongitud(double longitud) {
@@ -168,10 +174,8 @@ public class GestionPlayas {
             if (playas[i] != null) {
                 contador++;
             }
-
         }
         return contador;
-
     }
     
 
@@ -182,7 +186,6 @@ public class GestionPlayas {
                 sinHuecos[j] = playas[i];
                 j++;
             }
-
         }
         return sinHuecos;
     }
@@ -195,6 +198,7 @@ public class GestionPlayas {
              System.out.println(sinHuecos[i].toString()+sinHuecos[i].getPuntuacion());
             
         }
+        
     }
     public void listarPlayas(){
     for (int i = 0; i < playas.length; i++) 

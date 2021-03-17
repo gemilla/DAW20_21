@@ -30,7 +30,6 @@ public abstract class Playa implements Comparable<Playa> {
         direccion = new Direccion();
         longitud = Math.random()*5000;
         valoracion= Playa.generadorValoraciones();
-        
     }
 
     public int getId() {
