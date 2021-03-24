@@ -44,5 +44,7 @@ public class Chalet extends Alojamiento{
 		return super.toString()+this.esPareado();
 	}
 
+    
+
    
 }

@@ -13,6 +13,7 @@ public class Tester {
     public static void main(String args[]){
     Inmobiliaria Casas = new Inmobiliaria();
     Casas.listarAlojamientos();
+    Casas.ordenar(Casas.obtenerArrayUnidimensional(Inmobiliaria.provincias[0]));
     }
             
 }

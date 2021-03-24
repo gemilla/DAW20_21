@@ -1,6 +1,6 @@
 package ExamenD_Inmobiliaria;
 
-public abstract class Alojamiento {
+public abstract class Alojamiento implements Comparable<Alojamiento> {
 	protected String id;
 	protected double precio;
 	protected double metros;
@@ -58,9 +58,13 @@ public abstract class Alojamiento {
         
 	@Override
 	public String toString() {
-		return  getClass().getSimpleName()+"[id=" + id + ", precio=" + precio + ", metros=" + metros + ", dir=" + dir + ", anyo=" + anyo
+           return  getClass().getSimpleName()+"[id=" + id + ", precio=" + precio + ", metros=" + metros + ", dir=" + dir + ", anyo=" + anyo
 				+ "]";
 	}
-	
+	@Override
+    public int compareTo(Alojamiento o) {
+        return this.anyo-o.anyo;
+       
+    }
 	
 }
