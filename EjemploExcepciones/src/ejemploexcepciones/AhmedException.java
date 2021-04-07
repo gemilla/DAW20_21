@@ -9,7 +9,7 @@ package ejemploexcepciones;
  *
  * @author gema
  */
-public class AhmedException extends RuntimeException{
+public class AhmedException extends Exception{
 
     public AhmedException() {
         super("El número 7 no se permite");

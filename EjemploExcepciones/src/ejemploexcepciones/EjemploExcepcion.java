@@ -15,31 +15,40 @@ import java.util.logging.Logger;
  * @author gema
  */
 //ojo Excepción propia de Ahmed
-
 public class EjemploExcepcion {
+
     public static void comprobacion(int numero) throws AhmedException {
         if (numero==7)
-            throw new AhmedException("77777777777777777 no");
+            throw new AhmedException();
     
     }
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
 
-        int numero = 0;
+        int numero=0;
+
+        
+
+
         boolean error;
         do {
             error = false;
-            System.out.println("Introduce un número: 1,2 o 3, nunca el 7");
+            System.out.println("Introduce un número: 1,2 o 3");
             try {
                 numero = lector.nextInt();
                 comprobacion(numero);
                 System.out.println("El numero introducido es:" + numero);
             } catch (InputMismatchException e) {
                 error = true;
-                System.out.println("1, 2 o 3 por favor, nunca el 7");
-                lector.nextLine();
+                System.out.println("1, 2 o 3 por favor");
+                lector.nextLine();//limpiar el 
+                    System.out.println(e.getCause());
+            System.out.println(e.getMessage());
+        
+            } catch (AhmedException ex) {
+                System.out.println(ex.getMessage());
             } 
         } while (error == true || numero>=4 || numero <1);
-
+         
     }
 }
