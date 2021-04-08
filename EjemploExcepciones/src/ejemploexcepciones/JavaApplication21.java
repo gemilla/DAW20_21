@@ -20,10 +20,11 @@ public class JavaApplication21 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner lector = new Scanner(System.in);
-        System.out.println("introduce número");
+        
         boolean isNotNumber = false;
         int num=-1;
         do {
+            System.out.println("introduce número");
             try {
                 isNotNumber = false;
                 num = lector.nextInt();

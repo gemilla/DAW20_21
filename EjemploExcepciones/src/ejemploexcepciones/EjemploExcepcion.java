@@ -18,17 +18,15 @@ import java.util.logging.Logger;
 public class EjemploExcepcion {
 
     public static void comprobacion(int numero) throws AhmedException {
-        if (numero==7)
-            throw new AhmedException();
-    
+        if (numero == 7) {
+            throw new AhmedException("DANGER DANGER, NO 7!!");
+        }
+
     }
+
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
-
-        int numero=0;
-
-        
-
+        int numero = 0;
 
         boolean error;
         do {
@@ -42,13 +40,12 @@ public class EjemploExcepcion {
                 error = true;
                 System.out.println("1, 2 o 3 por favor");
                 lector.nextLine();//limpiar el 
-                    System.out.println(e.getCause());
-            System.out.println(e.getMessage());
-        
+                System.out.println(e.getCause());
+                System.out.println(e.getMessage());
             } catch (AhmedException ex) {
                 System.out.println(ex.getMessage());
             } 
-        } while (error == true || numero>=4 || numero <1);
-         
+        } while (error == true || numero >= 4 || numero < 1);
+
     }
 }
