@@ -39,7 +39,7 @@ public class EjemploExcepcion {
             } catch (InputMismatchException e) {
                 error = true;
                 System.out.println("1, 2 o 3 por favor");
-                lector.nextLine();//limpiar el 
+                lector.nextLine();//limpiar el enter 
                 System.out.println(e.getCause());
                 System.out.println(e.getMessage());
             } catch (AhmedException ex) {
