@@ -71,7 +71,7 @@ public class JavaApplicationExcepcionesMain {
         } while (!frase.equals("fin"));
         pw.close();
     }
-
+    
     public static void leerFicheroEscaner() throws FileNotFoundException, IOException {
         System.out.println("leyedo fichero....");
         //Scanner lf = new Scanner(new File("prueba")/*,"ISO-8859-1"*/);
@@ -88,6 +88,9 @@ public class JavaApplicationExcepcionesMain {
             cadena = lf.nextLine();
             String trozos[] = cadena.split(";");
             System.out.println(trozos[0]);
+            Elemento elemento = new Elemento (trozos[0],trozos[1],trozos[2]);
+            //Y el diccionario que fuese un array de elementos.
+            System.out.println(elemento);
         }
         System.out.println("Fin de Fichero");
         lf.close();
