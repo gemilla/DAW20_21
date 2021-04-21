@@ -28,7 +28,11 @@ public class Elemento implements Comparable<Elemento>{
 
     @Override
     public String toString() {
-        return "Elemento{" + "categoria=" + categoria + ", palabra=" + palabra + '}';
+        return "Elemento{" + "dificultad=" + dificultad + ", categoria=" + categoria + ", palabra=" + palabra + '}';
+    }
+
+    public String toStringFichero() {
+        return palabra +";"+ categoria + ";" +dificultad+";";
     }
 
     @Override

@@ -24,6 +24,10 @@ public class Diccionario {
         
     }
     
+    public Diccionario(Elemento [] lista){
+        this.lista = lista;
+    }
+    
     public int cuantos(String categoria, int dificultad){
         int cantidad=0;
         for (int i = 0; i < lista.length; i++) {
