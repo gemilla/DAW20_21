@@ -1,12 +1,15 @@
-package javaapplication1;
-public class Elemento implements Comparable<Elemento>{
+package textoexcepcionesmain;
+
+public class Elemento implements Comparable<Elemento> {
+
     protected String categoria;
     protected String palabra; //en función de la categoría será una serie concreta, una pelicula concreta, un videojuego concreto, un grupo música concreto
     protected String dificultad;
+
     public Elemento(String palabra, String categoria, String dificultad) {
         this.categoria = categoria;
         this.palabra = palabra;
-        this.dificultad= dificultad;
+        this.dificultad = dificultad;
     }
 
     public String getCategoria() {
@@ -30,11 +33,13 @@ public class Elemento implements Comparable<Elemento>{
         return "Elemento{" + "categoria=" + categoria + ", palabra=" + palabra + ", dificultad=" + dificultad + '}';
     }
 
-    
+    public String toStringFichero() {
+        return palabra + ";" + categoria + ";" + dificultad + ";";
+    }
 
     @Override
     public int compareTo(Elemento o) {
-        return this.palabra.length()-o.palabra.length();
+        return this.palabra.length() - o.palabra.length();
     }
-    
+
 }
