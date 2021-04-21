@@ -60,7 +60,7 @@ public class JavaApplicationExcepcionesMain {
 
     public static void escribirFicheroPWconservar() throws IOException {
         Scanner lector = new Scanner(System.in);
-        PrintWriter pw = new PrintWriter(new FileWriter("prueba", true));
+        PrintWriter pw = new PrintWriter(new FileWriter("prueba",true));
         String frase = "";
         do {
             System.out.println("introduce frase");
@@ -81,16 +81,15 @@ public class JavaApplicationExcepcionesMain {
             fichero.createNewFile();
             escribirFicheroFW("rita");
         }*/
-      
-        Scanner lf = new Scanner(new File ("prueba"));
+        Scanner lf = new Scanner(new File("prueba"));
         String cadena;
         while (lf.hasNextLine()) {
             cadena = lf.nextLine();
-            String trozos[] = cadena.split(";");
-            System.out.println(trozos[0]);
-            Elemento elemento = new Elemento (trozos[0],trozos[1],trozos[2]);
+            //String trozos[] = cadena.split(";");
+            System.out.println(cadena);
+            //Elemento elemento = new Elemento (trozos[0],trozos[1],trozos[2]);
             //Y el diccionario que fuese un array de elementos.
-            System.out.println(elemento);
+            //System.out.println(elemento);
         }
         System.out.println("Fin de Fichero");
         lf.close();
