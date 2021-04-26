@@ -56,9 +56,11 @@ public class TextoExcepcionesMetodos {
 
     public static void escribirFicheroPW() {
         Scanner lector = new Scanner(System.in);
-
+        File f = new File(NOMBRE_FICHERO);
         PrintWriter pw = null;
         try {
+            if (!f.exists()) 
+                f.createNewFile();
             pw = new PrintWriter(NOMBRE_FICHERO);
             String frase = "";
             do {
@@ -134,15 +136,14 @@ public class TextoExcepcionesMetodos {
         }
     }
 
-
-/**
- * Observar la diferencia de tratar las excepciones en cada m�todo. Permite
- * hacer un tratamiento m�s cercano a donde ocurre el error y continuar con el
- * programa.
- *
- * @param args the command line arguments
- */
-public static void main(String[] args) {
+    /**
+     * Observar la diferencia de tratar las excepciones en cada m�todo. Permite
+     * hacer un tratamiento m�s cercano a donde ocurre el error y continuar con
+     * el programa.
+     *
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
         // TODO code application logic here
         escribirFicheroFW();
         leerFicheroEscaner();
