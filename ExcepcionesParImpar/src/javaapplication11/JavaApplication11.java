@@ -5,6 +5,9 @@
  */
 package javaapplication11;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 
 
 /**
@@ -18,13 +21,23 @@ public class JavaApplication11 {
      */
     
     public static void main(String[] args) {
-        try {
-            // TODO code application logic here
-            Comprobaciones.isPar(10);
-        } catch (ParException | ImparException ex) {
-            //Logger.getLogger(JavaApplication11.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println(ex.getMessage());
-        }
+        Scanner lector = new Scanner(System.in);
+        System.out.println("Introduzca un número para saber si es par o Impar");
+        boolean letra;
+        do{
+            letra=false;
+            try {
+                int no = lector.nextInt();
+                Comprobaciones.isPar(no);
+            } catch (InputMismatchException ex) {
+                letra = true;
+                lector.nextLine();
+                System.out.println("No puedes introducir una letra, tiene que ser un número");
+                //System.out.println(ex.getMessage());
+            } catch (ImparException | ParException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }while(letra==true);
         System.out.println("Vuelve pronto");
         //Logger.getLogger(JavaApplication11.class.getName()).log(Level.SEVERE, null, ex);
         
