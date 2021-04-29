@@ -5,17 +5,13 @@
  */
 
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.Serializable;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
  *
  * @author GEMA
  */
-public class Empresa{
+public class Empresa {
 
     protected Trabajador[] trabajadores;
 

@@ -1,3 +1,6 @@
+
+import java.io.Serializable;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,7 +8,7 @@
  */
 
 
-import java.io.Serializable;
+
 
 /**
  *
@@ -27,7 +30,15 @@ public class Fecha implements Serializable{
         this.mes = mes;
         this.anyo = anyo;
     }
-
+    
+    public Fecha(String fecha){
+        String trozosFecha[] = fecha.split("/");
+        this.dia = Integer.parseInt(trozosFecha[0]);
+        this.mes = Integer.parseInt(trozosFecha[1]);
+        this.anyo= Integer.parseInt(trozosFecha[2]);
+        //this(Integer.parseInt(fecha.split("/")[0]),Integer.parseInt(fecha.split("/")[1]),Integer.parseInt(fecha.split("/")[2]));
+        
+    }
     public int getDia() {
         return dia;
     }
