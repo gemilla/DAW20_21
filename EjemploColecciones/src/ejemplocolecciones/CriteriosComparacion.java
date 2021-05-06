@@ -18,9 +18,11 @@ public class CriteriosComparacion {
 class porEdad implements Comparator<Individuo>{
 
     @Override
-    public int compare(Individuo t, Individuo t1) {
-       return t.edad - t1.edad;
+    public int compare(Individuo o1, Individuo o2) {
+        return o1.edad-o2.edad;
     }
+
+   
 
 }
 
@@ -35,3 +37,16 @@ class porPoblacion implements Comparator<Individuo>{
 
 }
 
+class porPoblacionEdad implements Comparator<Individuo>{
+
+    @Override
+    public int compare(Individuo t, Individuo t1)    {
+        int aux =t.poblacion.compareTo(t1.poblacion);
+        if(aux==0)
+            aux = t.edad-t1.edad;
+        return aux;
+    }
+    
+
+
+}

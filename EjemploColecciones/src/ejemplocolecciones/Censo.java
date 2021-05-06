@@ -26,7 +26,7 @@ public class Censo implements Serializable {
     public Censo() {
         //primera ejecución
         censo = new ArrayList();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
             /*Individuo aux = new Individuo((int) (Math.random() * 100), "individuo" + (i + 1), "provincia" + (i % 3));
             censo.add(aux);*/
             censo.add(new Individuo((int) (Math.random() * 100), "individuo" + (i + 1), "provincia" + (i % 3)));

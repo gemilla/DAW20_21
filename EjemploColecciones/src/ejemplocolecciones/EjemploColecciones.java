@@ -115,7 +115,7 @@ public class EjemploColecciones {
                         Collections.sort(censoEspaña.censo, new porEdad());
                         System.out.println("orden edad----");
                         censoEspaña.listar();
-                        Collections.sort(censoEspaña.censo, new porPoblacion());
+                        Collections.sort(censoEspaña.censo, new porPoblacionEdad());
                         System.out.println("orden poblacion----");
                         censoEspaña.listar();
                         
