@@ -35,17 +35,24 @@ public class GestorFicheros {
         File f2 = new File(FICHERO_BINARIO);
         try {
             if (!f.exists()) {
+
                 f.createNewFile();
             }
-            if (!f2.exists()) {
-                f2.createNewFile();
-            }
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
+        
+        if (!f2.exists()) {
+            f2.createNewFile();
         }
     }
+    catch (IOException ex
 
-    public static void escribirFicheroPW(String fichero, ArrayList<Individuo> lista) {
+    
+        ) {
+                Logger.getLogger(GestorFicheros.class.getName()).log(Level.SEVERE, null, ex);
+    }
+
+}
+
+public static void escribirFicheroPW(String fichero, ArrayList<Individuo> lista) {
         try {
             PrintWriter pw = new PrintWriter(fichero);
             for (int i = 0; i < lista.size(); i++) {
@@ -53,7 +60,14 @@ public class GestorFicheros {
             }
             pw.close();
         } catch (IOException ex) {
-            Logger.getLogger(GestorFicheros.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GestorFicheros
+
+
+
+.class  
+
+
+.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -76,7 +90,12 @@ public class GestorFicheros {
             lf.close();
 
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(GestorFicheros.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(GestorFicheros
+
+.class  
+
+
+.getName()).log(Level.SEVERE, null, ex);
         }
         return lista;
     }
